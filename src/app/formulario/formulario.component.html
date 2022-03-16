@@ -1,0 +1,37 @@
+<form action="">
+  <div class="cartilla">
+    <h4>Users Form</h4>
+    <div class="row row-cols-1">
+      <div class="col gy-3">
+        <h5>Username</h5>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Please enter your username"
+          name="userNameInput"
+          [(ngModel)]="userNameInput"
+        />
+      </div>
+      <div class="col gy-3">
+        <h5>Password</h5>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Please enter your password"
+          name="passwordInput"
+          [(ngModel)]="passwordInput"
+        />
+      </div>
+      <div class="col gy-3">
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" style="margin-top: 30px; display: block; margin: auto;" (click)="guardarUser();">Save</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-danger" style="margin-top: 30px; display: block; margin: auto;" (click)="navUsers()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

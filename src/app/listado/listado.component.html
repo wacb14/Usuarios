@@ -1,0 +1,37 @@
+<h4>Users List</h4>
+<button class="btn btn-primary m-3" (click)="navNewUser();">Add new user</button>
+<div class="container-fluid text-center">
+  <div class="row border-top pb-2">
+    <div class="col g-2">
+      <b> Nro </b>
+    </div>
+    <div class="col g-2">
+      <b> Username </b>
+    </div>
+    <div class="col g-2">
+      <b> Password </b>
+    </div>
+    <div class="col g-2"></div>
+    <div class="col g-2"></div>
+  </div>
+  <div
+    class="row border-top pb-2"
+    *ngFor="let user of users; let indice = index"
+  >
+    <div class="col g-2">
+      {{ indice + 1 }}
+    </div>
+    <div class="col g-2">
+      {{ user.userName }}
+    </div>
+    <div class="col g-2">
+      {{ user.password }}
+    </div>
+    <div class="col g-2">
+      <button class="btn btn-success" [routerLink]="['/users', indice]">Editar</button>
+    </div>
+    <div class="col g-2">
+      <button class="btn btn-danger" (click)="eliminarUser(indice);">Eliminar</button>
+    </div>
+  </div>
+</div>
