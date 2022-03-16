@@ -8,13 +8,15 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ListadoComponent } from './listado/listado.component';
 import { UsersService } from './usuarios/users.service';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { CabeceroComponent } from './cabecero/cabecero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
     ListadoComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    CabeceroComponent
   ],
   imports: [
     BrowserModule,

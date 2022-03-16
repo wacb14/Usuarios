@@ -24,4 +24,9 @@ export class ListadoComponent implements OnInit {
   eliminarUser(id:number){
     this.usersService.eliminar(id);
   }
+
+  saludar(id:number){
+    let user = this.usersService.buscar(id);
+    this.usersService.comunicarMensaje(`Hola! Te envío la informacion del usuario ${user.userName} ${user.password}`);
+  }
 }

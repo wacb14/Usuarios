@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { User } from './user.model';
 
 export class UsersService {
@@ -5,6 +6,7 @@ export class UsersService {
     new User('Pedro', 'Picapiedra'),
     new User('Pablo', 'Marmol')
   ];
+  mensajero = new EventEmitter<string>();
 
   agregar(user: User) {
     this.users.push(user);
@@ -18,5 +20,10 @@ export class UsersService {
   }
   buscar(id:number):User{
     return this.users[id];
+  }
+
+  //-- Para comunicar dos componentes
+  comunicarMensaje(mensaje:string){
+    this.mensajero.emit(mensaje);
   }
 }

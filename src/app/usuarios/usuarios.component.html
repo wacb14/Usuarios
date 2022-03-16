@@ -1,4 +1,5 @@
-<h1 class="text-center">Users APP</h1>
+<h5 class="text-center">{{mensaje}}</h5>
+<app-cabecero [descripcion]="'This app allows to administrate the accounts of the business'" (mensajeEnviado)="recibirMensaje($event)"></app-cabecero>
 <div class="container">
   <div class="row">
     <router-outlet></router-outlet>
