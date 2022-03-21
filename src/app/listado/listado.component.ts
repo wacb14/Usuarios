@@ -15,7 +15,11 @@ export class ListadoComponent implements OnInit {
     this.users = usersService.users;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.usersService.getAllUsers().subscribe(
+      (users)=>{console.log(users);}
+    );
+  }
 
   navNewUser(){
     this.router.navigate(["users/add"]);
